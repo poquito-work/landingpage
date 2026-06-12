@@ -86,7 +86,7 @@ export default function Navigation() {
             className={`transition-all duration-500 ${isDark ? 'brightness-0 invert opacity-85' : 'opacity-90'}`}
           />
           <span
-            className={`transition-all duration-500 text-xl ${isDark ? 'text-white/18' : 'text-pq-green/20'}`}
+            className={`transition-all duration-500 text-xl ${isDark ? 'text-white' : 'text-pq-green'}`}
           >|</span>
           <span
             className={`font-hero font-bold tracking-[-0.02em] transition-all duration-500 ${isDark ? 'text-pq-cream' : 'text-pq-green'}`}
@@ -102,10 +102,10 @@ export default function Navigation() {
             <Link
               key={link.label}
               href={link.href}
-              className={`text-sm tracking-[0.08em] uppercase transition-all duration-300 hover:tracking-[0.12em] ${
+              className={`text-sm tracking-[0.08em] uppercase transition-all duration-300 hover:tracking-[0.12em] hover:font-bold hover:scale-[1.03] ${
                 isDark
-                  ? 'text-pq-cream/65 hover:text-pq-cream'
-                  : 'text-pq-green/60 hover:text-pq-green'
+                  ? 'text-pq-cream hover:text-pq-cream'
+                  : 'text-pq-green hover:text-pq-green'
               }`}
             >
               {link.label}
@@ -116,9 +116,9 @@ export default function Navigation() {
         {/* ── Login CTA ── */}
         <Link
           href="#login"
-          className={`hidden md:flex items-center gap-2 px-6 py-2.5 text-sm tracking-[0.08em] uppercase rounded-full transition-all duration-300 ${
+          className={`hidden md:flex items-center gap-2 px-6 py-2.5 text-sm tracking-[0.08em] uppercase rounded-full transition-all duration-300 hover:font-bold hover:scale-[1.03] ${
             isDark
-              ? 'text-pq-cream/75 border border-pq-cream/20 hover:bg-pq-cream/10 hover:text-pq-cream hover:border-pq-cream/40'
+              ? 'text-pq-cream border border-pq-cream/20 hover:bg-pq-cream/10 hover:text-pq-cream hover:border-pq-cream/40'
               : 'text-pq-green border border-pq-green/22 hover:bg-pq-green/6 hover:border-pq-green/38'
           }`}
         >
@@ -160,7 +160,7 @@ export default function Navigation() {
               key={link.label}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-pq-cream/70 text-base tracking-[0.1em] uppercase"
+              className="text-pq-cream text-base tracking-[0.1em] uppercase hover:font-bold hover:scale-[1.03] transition-all duration-200 inline-block"
             >
               {link.label}
             </Link>

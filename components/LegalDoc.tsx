@@ -22,7 +22,7 @@ export default function LegalDoc({
       {/* Sticky sidebar nav */}
       <aside className="hidden lg:block">
         <div className="sticky top-28">
-          <p className="text-pq-green/40 text-[10px] tracking-[0.18em] uppercase mb-4">Legal</p>
+          <p className="text-pq-green text-[10px] tracking-[0.18em] uppercase mb-4">Legal</p>
           <nav className="flex flex-col gap-1">
             {legalNav.map(({ label, href }) => (
               <Link
@@ -31,7 +31,7 @@ export default function LegalDoc({
                 className={`text-sm px-3 py-2 rounded-lg transition-all duration-200 ${
                   href.includes(title.toLowerCase().replace(/ /g, '-'))
                     ? 'bg-pq-green/8 text-pq-green'
-                    : 'text-pq-green/50 hover:text-pq-green hover:bg-pq-green/5'
+                    : 'text-pq-green hover:text-pq-green hover:bg-pq-green/5 hover:font-bold hover:scale-[1.03] transition-all duration-200'
                 }`}
               >
                 {label}
@@ -55,7 +55,7 @@ export default function LegalDoc({
           >
             {title.toUpperCase()}
           </h1>
-          <p className="text-pq-green/40 text-sm">Last updated: {lastUpdated}</p>
+          <p className="text-pq-green text-sm">Last updated: {lastUpdated}</p>
         </div>
 
         {/* Mobile legal nav */}
@@ -64,7 +64,7 @@ export default function LegalDoc({
             <Link
               key={href}
               href={href}
-              className="text-xs px-3 py-1.5 rounded-full border border-pq-green/15 text-pq-green/55 hover:text-pq-green hover:border-pq-green/30 transition-all"
+              className="text-xs px-3 py-1.5 rounded-full border border-pq-green/15 text-pq-green hover:text-pq-green hover:border-pq-green/30 hover:font-bold hover:scale-[1.03] transition-all duration-200 inline-block"
             >
               {label}
             </Link>
@@ -72,7 +72,7 @@ export default function LegalDoc({
         </div>
 
         {/* Body */}
-        <div className="[&_ul]:list-disc [&_ul]:list-outside [&_ul]:pl-5 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:list-outside [&_ol]:pl-5 [&_ol]:space-y-2 [&_a]:underline-offset-2 [&_strong]:text-pq-green/85 [&_strong]:font-normal">
+        <div className="[&_ul]:list-disc [&_ul]:list-outside [&_ul]:pl-5 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:list-outside [&_ol]:pl-5 [&_ol]:space-y-2 [&_a]:underline-offset-2 [&_strong]:text-pq-green [&_strong]:font-normal">
           {children}
         </div>
       </article>

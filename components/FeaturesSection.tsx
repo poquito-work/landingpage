@@ -82,7 +82,7 @@ export default function FeaturesSection() {
           >
             THE COMPLETE MAHJONG PLAYGROUND
           </h2>
-          <p className="text-pq-cream/45 mt-4 max-w-lg leading-relaxed">
+          <p className="text-pq-cream mt-4 max-w-lg leading-relaxed hover:font-bold hover:scale-[1.03] transition-all duration-200">
             Every way to play, in one place. Built for beginners. Respected by masters.
           </p>
         </motion.div>
@@ -132,7 +132,7 @@ export default function FeaturesSection() {
                 >
                   RANKED POINTS{'\n'}& TIERS
                 </h3>
-                <p className="text-pq-cream/70 text-sm leading-relaxed">
+                <p className="text-pq-cream text-sm leading-relaxed hover:font-bold hover:scale-[1.03] transition-all duration-200">
                   Climb from Beginner through Bronze, Silver, Gold, Platinum, and Grand Master. Every game is a step on your journey.
                 </p>
                 {/* Tier pills */}
@@ -197,7 +197,7 @@ export default function FeaturesSection() {
               >
                 WHERE TRADITION MEETS THE MODERN TABLE.
               </h3>
-              <p className="text-pq-cream/55 text-sm mt-4 max-w-sm leading-relaxed">
+              <p className="text-pq-cream text-sm mt-4 max-w-sm leading-relaxed hover:font-bold hover:scale-[1.03] transition-all duration-200">
                 Every detail in Poquito honours the weight and ritual of real Mahjong — the ceramic feel, the click of tiles, the quiet tension of a winning hand.
               </p>
             </div>
@@ -246,7 +246,7 @@ function FeatureCard({
           >
             {feature.title}
           </h3>
-          <p className="text-pq-cream/50 text-sm leading-relaxed">{feature.desc}</p>
+          <p className="text-pq-cream text-sm leading-relaxed hover:font-bold hover:scale-[1.03] transition-all duration-200">{feature.desc}</p>
 
           {feature.tiers && (
             <div className="flex flex-wrap gap-2 mt-1">

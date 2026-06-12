@@ -144,7 +144,7 @@ export default function Footer() {
               height={34}
               className="brightness-0 invert opacity-70"
             />
-            <p className="text-pq-cream/40 text-xs leading-relaxed max-w-[180px] font-normal">
+            <p className="text-pq-cream text-xs leading-relaxed max-w-[180px] font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200">
               Traditional Mahjong, reimagined for the modern world.
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div key={heading} className="flex flex-col gap-3">
-              <h3 className="text-pq-cream/35 text-[9px] tracking-[0.22em] uppercase font-normal">
+              <h3 className="text-pq-cream text-[9px] tracking-[0.22em] uppercase font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200">
                 {heading}
               </h3>
               <ul className="flex flex-col gap-2.5">
@@ -160,7 +160,7 @@ export default function Footer() {
                   <li key={label}>
                     <Link
                       href={href}
-                      className="text-pq-cream/50 text-xs hover:text-pq-cream/85 transition-colors duration-200 font-normal"
+                      className="text-pq-cream text-xs hover:text-pq-cream hover:font-bold hover:scale-[1.03] transition-all duration-200 font-normal inline-block"
                     >
                       {label}
                     </Link>
@@ -190,7 +190,7 @@ export default function Footer() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="flex items-center justify-center py-5"
         >
-          <p className="text-pq-cream/22 text-xs font-normal tracking-wide">
+          <p className="text-pq-cream text-xs font-normal tracking-wide hover:font-bold hover:scale-[1.03] transition-all duration-200">
             © 2026 Poquito Mahjong. All Rights Reserved.
           </p>
         </motion.div>

@@ -141,8 +141,8 @@ function FAQItem({
         className="w-full flex items-center justify-between gap-6 py-6 text-left group"
       >
         <span
-          className={`font-hero font-normal text-base leading-snug transition-colors duration-300 ${
-            isOpen ? 'text-pq-green' : 'text-pq-green/70'
+          className={`font-hero font-normal text-base leading-snug transition-all duration-300 group-hover:font-bold group-hover:scale-[1.02] ${
+            isOpen ? 'text-pq-green' : 'text-pq-green'
           } group-hover:text-pq-green`}
           style={{ fontSize: 'clamp(0.95rem, 1.5vw, 1.1rem)' }}
         >
@@ -159,7 +159,7 @@ function FAQItem({
           }`}
         >
           <svg
-            className={`w-3 h-3 transition-colors duration-300 ${isOpen ? 'text-pq-rust' : 'text-pq-green/40'}`}
+            className={`w-3 h-3 transition-colors duration-300 ${isOpen ? 'text-pq-rust' : 'text-pq-green'}`}
             fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
@@ -177,7 +177,7 @@ function FAQItem({
             transition={{ duration: 0.45, ease: EASE }}
             style={{ overflow: 'hidden' }}
           >
-            <p className="text-pq-green/55 text-sm font-light leading-relaxed pb-6 max-w-2xl">
+            <p className="text-pq-green text-sm font-light leading-relaxed pb-6 max-w-2xl hover:font-bold hover:scale-[1.03] transition-all duration-200">
               {faq.a}
             </p>
           </motion.div>

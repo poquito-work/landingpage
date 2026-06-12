@@ -70,7 +70,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease: EASE, delay: 0.2 }}
-          className="text-pq-cream/55 leading-relaxed max-w-xl mx-auto mb-12"
+          className="text-pq-cream leading-relaxed max-w-xl mx-auto mb-12 hover:font-bold hover:scale-[1.03] transition-all duration-200"
           style={{ fontSize: '1.1rem' }}
         >
           Thousands of tables are live right now. Download Poquito and make your first move.
@@ -118,7 +118,7 @@ export default function CTASection() {
           ].map(({ label, sub }) => (
             <div key={sub} className="text-center">
               <p className="font-hero font-bold text-pq-cream text-2xl">{label}</p>
-              <p className="text-pq-cream/35 text-xs tracking-[0.12em] uppercase mt-0.5">{sub}</p>
+              <p className="text-pq-cream text-xs tracking-[0.12em] uppercase mt-0.5">{sub}</p>
             </div>
           ))}
         </motion.div>
@@ -142,7 +142,7 @@ function StoreBadge({ icon, label, sub }: { icon: string; label: string; sub: st
     >
       <Image src={icon} alt={label} width={22} height={22} className="rounded-md" />
       <div className="flex flex-col">
-        <span className="text-pq-cream/40 text-[9px] tracking-[0.12em] uppercase leading-none">{sub}</span>
+        <span className="text-pq-cream text-[9px] tracking-[0.12em] uppercase leading-none">{sub}</span>
         <span className="text-pq-cream text-xs leading-tight mt-0.5">{label}</span>
       </div>
     </motion.a>

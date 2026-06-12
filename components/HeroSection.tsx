@@ -116,7 +116,7 @@ export default function HeroSection() {
             {/* Body */}
             <motion.p
               variants={itemVariants}
-              className="text-pq-green/70 leading-relaxed font-normal"
+              className="text-pq-green leading-relaxed font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200"
               style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)' }}
             >
               Practice, play, and compete your way to the top.
@@ -156,7 +156,7 @@ export default function HeroSection() {
                   </div>
                 ))}
               </div>
-              <span className="text-pq-green/65 text-sm font-normal">
+              <span className="text-pq-green text-sm font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200 inline-block">
                 Join <span className="text-pq-green font-normal">10,000+</span> players worldwide
               </span>
             </motion.div>
@@ -201,7 +201,7 @@ export default function HeroSection() {
         transition={{ delay: 2, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
       >
-        <span className="text-pq-green/35 text-xs tracking-[0.2em] uppercase">Scroll</span>
+        <span className="text-pq-green text-xs tracking-[0.2em] uppercase">Scroll</span>
         <motion.div
           className="w-[1px] h-8 bg-gradient-to-b from-pq-green/35 to-transparent"
           animate={{ scaleY: [0, 1, 0] }}
@@ -273,7 +273,7 @@ function PhoneMockup({ tiles }: { tiles: string[] }) {
 
       <div className="absolute inset-0 flex flex-col" style={{ background: 'linear-gradient(160deg, #143322 0%, #0c2318 100%)' }}>
         <div className="flex justify-between items-center px-6 pt-12 pb-2">
-          <span className="text-pq-cream/50 text-[10px]">9:41</span>
+          <span className="text-pq-cream text-[10px]">9:41</span>
           <div className="flex items-center gap-1">
             <div className="flex gap-0.5 items-end h-3">
               {[2, 3, 4, 3].map((h, i) => (
@@ -290,12 +290,12 @@ function PhoneMockup({ tiles }: { tiles: string[] }) {
           <Image src="/images/logo.png" alt="Poquito" width={80} height={28} className="brightness-0 invert opacity-70" />
           <div className="flex items-center gap-1 bg-pq-rust/20 px-2.5 py-1 rounded-full">
             <div className="w-1.5 h-1.5 rounded-full bg-pq-rust animate-pulse" />
-            <span className="text-pq-cream/80 text-[9px] tracking-[0.1em]">LIVE</span>
+            <span className="text-pq-cream text-[9px] tracking-[0.1em]">LIVE</span>
           </div>
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center px-4 gap-4">
-          <p className="text-pq-cream/30 text-[9px] tracking-[0.18em] uppercase">Your Hand</p>
+          <p className="text-pq-cream text-[9px] tracking-[0.18em] uppercase">Your Hand</p>
 
           <div className="flex gap-1 items-end">
             {tiles.map((src, i) => (
@@ -313,15 +313,15 @@ function PhoneMockup({ tiles }: { tiles: string[] }) {
 
           <div className="w-full mt-2 rounded-xl p-3 flex items-center justify-between" style={{ background: 'rgba(255,255,255,0.05)' }}>
             <div>
-              <p className="text-pq-cream/40 text-[8px] tracking-[0.15em] uppercase">Score</p>
+              <p className="text-pq-cream text-[8px] tracking-[0.15em] uppercase">Score</p>
               <p className="text-pq-cream text-base font-bold mt-0.5">2,450</p>
             </div>
             <div className="text-center">
-              <p className="text-pq-cream/40 text-[8px] tracking-[0.15em] uppercase">Round</p>
+              <p className="text-pq-cream text-[8px] tracking-[0.15em] uppercase">Round</p>
               <p className="text-pq-cream text-base font-bold mt-0.5">East 3</p>
             </div>
             <div className="text-right">
-              <p className="text-pq-cream/40 text-[8px] tracking-[0.15em] uppercase">Rank</p>
+              <p className="text-pq-cream text-[8px] tracking-[0.15em] uppercase">Rank</p>
               <p className="text-pq-rust text-base font-bold mt-0.5">Gold I</p>
             </div>
           </div>
@@ -338,7 +338,7 @@ function PhoneMockup({ tiles }: { tiles: string[] }) {
 
         <div className="border-t border-white/5 px-6 py-3 flex justify-around">
           {['⊞', '⊗', '♔', '⊕'].map((icon, i) => (
-            <div key={i} className={`text-sm ${i === 0 ? 'text-pq-rust' : 'text-pq-cream/30'}`}>{icon}</div>
+            <div key={i} className={`text-sm ${i === 0 ? 'text-pq-rust' : 'text-pq-cream'}`}>{icon}</div>
           ))}
         </div>
       </div>

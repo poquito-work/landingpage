@@ -64,7 +64,7 @@ export default function LoginSection() {
               WELCOME BACK TO THE TABLE.
             </h2>
 
-            <p className="text-pq-cream/70 leading-relaxed mb-10 max-w-sm font-normal">
+            <p className="text-pq-cream leading-relaxed mb-10 max-w-sm font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200">
               Your rank, your history, your rivals — all waiting. Sign in to pick up exactly where you left off.
             </p>
 
@@ -77,7 +77,7 @@ export default function LoginSection() {
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">
                   <span className="font-hero font-bold text-pq-cream text-2xl">{value}</span>
-                  <span className="text-pq-cream/40 text-[10px] tracking-[0.14em] uppercase font-normal">{label}</span>
+                  <span className="text-pq-cream text-[10px] tracking-[0.14em] uppercase font-normal">{label}</span>
                 </div>
               ))}
             </div>
@@ -110,7 +110,7 @@ export default function LoginSection() {
               >
                 Sign In
               </h3>
-              <p className="text-pq-cream/55 text-sm mb-8 font-normal">
+              <p className="text-pq-cream text-sm mb-8 font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200">
                 Access your Poquito account to continue playing.
               </p>
 
@@ -118,7 +118,7 @@ export default function LoginSection() {
 
                 {/* Email */}
                 <div className="flex flex-col gap-2">
-                  <label className="text-pq-cream/80 text-xs tracking-[0.14em] uppercase font-normal">
+                  <label className="text-pq-cream text-xs tracking-[0.14em] uppercase font-normal">
                     Email Address
                   </label>
                   <div
@@ -144,7 +144,7 @@ export default function LoginSection() {
                 {/* Password */}
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center justify-between">
-                    <label className="text-pq-cream/80 text-xs tracking-[0.14em] uppercase font-normal">
+                    <label className="text-pq-cream text-xs tracking-[0.14em] uppercase font-normal">
                       Password
                     </label>
                     <a href="#" className="text-pq-rust text-xs hover:underline underline-offset-2 font-normal">
@@ -171,7 +171,7 @@ export default function LoginSection() {
                     <button
                       type="button"
                       onClick={() => setShowPass(!showPass)}
-                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-pq-cream/35 hover:text-pq-cream/65 transition-colors"
+                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-pq-cream hover:text-pq-cream transition-colors"
                     >
                       {showPass ? (
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -201,11 +201,11 @@ export default function LoginSection() {
 
               <div className="flex items-center gap-3 my-6">
                 <div className="flex-1 h-[1px] bg-white/8" />
-                <span className="text-pq-cream/30 text-xs tracking-[0.1em] font-normal">or</span>
+                <span className="text-pq-cream text-xs tracking-[0.1em] font-normal">or</span>
                 <div className="flex-1 h-[1px] bg-white/8" />
               </div>
 
-              <p className="text-center text-pq-cream/50 text-sm font-normal">
+              <p className="text-center text-pq-cream text-sm font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200">
                 New to Poquito?{' '}
                 <a href="#" className="text-pq-rust font-normal hover:underline underline-offset-2">
                   Create an account

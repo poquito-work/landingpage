@@ -100,7 +100,7 @@ export default function PricingSection() {
           >
             UNLOCK THE TABLE
           </h2>
-          <p className="text-pq-cream/50 mt-4 max-w-md mx-auto leading-relaxed font-normal">
+          <p className="text-pq-cream mt-4 max-w-md mx-auto leading-relaxed font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200">
             One subscription. Every game mode, every table, every rank. No ads, no limits.
           </p>
         </motion.div>
@@ -158,7 +158,7 @@ export default function PricingSection() {
             <div className="flex items-start justify-between mb-6 relative z-10">
               <div>
                 <p className="text-pq-rust text-[10px] tracking-[0.22em] uppercase mb-1.5 font-normal">Annual</p>
-                <p className="text-pq-cream/45 text-xs tracking-[0.12em] uppercase font-normal">Grand Master Access</p>
+                <p className="text-pq-cream text-xs tracking-[0.12em] uppercase font-normal">Grand Master Access</p>
               </div>
               <span
                 className="text-pq-cream text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-full font-normal"
@@ -177,18 +177,18 @@ export default function PricingSection() {
                 >
                   $79.99
                 </span>
-                <span className="text-pq-cream/40 text-base mb-2 font-normal">/ yr</span>
+                <span className="text-pq-cream text-base mb-2 font-normal">/ yr</span>
               </div>
-              <p className="text-pq-cream/55 text-sm mt-1 font-normal">
+              <p className="text-pq-cream text-sm mt-1 font-normal hover:font-bold hover:scale-[1.03] transition-all duration-200">
                 <span className="text-pq-rust font-normal">$6.67 / mo</span>
-                <span className="mx-2 text-pq-cream/20">·</span>
-                <span className="text-pq-cream/55">Save 33%</span>
+                <span className="mx-2 text-pq-cream">·</span>
+                <span className="text-pq-cream">Save 33%</span>
               </p>
             </div>
 
             {/* Tier progression */}
             <div className="mt-5 mb-7 relative z-10">
-              <p className="text-pq-cream/30 text-[9px] tracking-[0.18em] uppercase mb-3 font-normal">Rank Progression</p>
+              <p className="text-pq-cream text-[9px] tracking-[0.18em] uppercase mb-3 font-normal">Rank Progression</p>
               <div className="flex items-center gap-0">
                 {TIERS.map((tier, i) => (
                   <div key={tier.short} className="flex items-center gap-0 flex-1">
@@ -201,7 +201,7 @@ export default function PricingSection() {
                       >
                         {tier.short.slice(0, 1)}
                       </motion.div>
-                      <span className="text-pq-cream/35 text-[7px] tracking-[0.06em] text-center leading-tight whitespace-pre-line font-normal" style={{ fontSize: '7px' }}>
+                      <span className="text-pq-cream text-[7px] tracking-[0.06em] text-center leading-tight whitespace-pre-line font-normal" style={{ fontSize: '7px' }}>
                         {tier.short}
                       </span>
                     </div>
@@ -216,7 +216,7 @@ export default function PricingSection() {
             {/* Features */}
             <ul className="flex flex-col gap-3 mb-8 flex-1 relative z-10">
               {ANNUAL_FEATURES.map((f) => (
-                <li key={f} className="flex items-center gap-3 text-pq-cream/75 text-sm font-normal">
+                <li key={f} className="flex items-center gap-3 text-pq-cream text-sm font-normal hover:font-bold hover:scale-[1.02] transition-all duration-200">
                   <CheckCircle accent />
                   {f}
                 </li>
@@ -239,7 +239,7 @@ export default function PricingSection() {
                 <button
                   onMouseEnter={() => setTooltip(true)}
                   onMouseLeave={() => setTooltip(false)}
-                  className="flex items-center gap-1.5 text-pq-cream/30 text-xs group font-normal"
+                  className="flex items-center gap-1.5 text-pq-cream text-xs group font-normal hover:font-bold transition-all duration-200"
                 >
                   <svg className="w-3 h-3 group-hover:text-pq-cream/50 transition-colors" viewBox="0 0 16 16" fill="currentColor">
                     <path fillRule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm.75-10.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5zm0 6a.75.75 0 00-1.5 0v.5a.75.75 0 001.5 0v-.5z" clipRule="evenodd" />
@@ -249,7 +249,7 @@ export default function PricingSection() {
                 {tooltip && (
                   <motion.div
                     initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }}
-                    className="absolute bottom-8 left-0 right-0 rounded-xl p-4 text-xs text-pq-cream/60 leading-relaxed z-20 border border-white/8 font-normal"
+                    className="absolute bottom-8 left-0 right-0 rounded-xl p-4 text-xs text-pq-cream leading-relaxed z-20 border border-white/8 font-normal"
                     style={{ background: 'rgba(12,35,24,0.96)', backdropFilter: 'blur(16px)' }}
                   >
                     Annual subscriptions are non-refundable. Benefits remain active until the end of the current term.
@@ -275,8 +275,8 @@ export default function PricingSection() {
           >
             {/* Header */}
             <div className="mb-6">
-              <p className="text-pq-cream/40 text-[10px] tracking-[0.22em] uppercase mb-1.5 font-normal">Monthly</p>
-              <p className="text-pq-cream/25 text-xs tracking-[0.12em] uppercase font-normal">Challenger Access</p>
+              <p className="text-pq-cream text-[10px] tracking-[0.22em] uppercase mb-1.5 font-normal">Monthly</p>
+              <p className="text-pq-cream text-xs tracking-[0.12em] uppercase font-normal">Challenger Access</p>
             </div>
 
             {/* Price */}
@@ -288,14 +288,14 @@ export default function PricingSection() {
                 >
                   $9.99
                 </span>
-                <span className="text-pq-cream/35 text-sm mb-1.5 font-normal">/ mo</span>
+                <span className="text-pq-cream text-sm mb-1.5 font-normal">/ mo</span>
               </div>
             </div>
 
             {/* Features */}
             <ul className="flex flex-col gap-3.5 mb-8 flex-1">
               {MONTHLY_FEATURES.map((f) => (
-                <li key={f} className="flex items-center gap-3 text-pq-cream/55 text-sm font-normal">
+                <li key={f} className="flex items-center gap-3 text-pq-cream text-sm font-normal hover:font-bold hover:scale-[1.02] transition-all duration-200">
                   <CheckCircle />
                   {f}
                 </li>
@@ -305,19 +305,19 @@ export default function PricingSection() {
             {/* CTA */}
             <motion.a
               href="#"
-              className="block text-center py-4 rounded-xl border border-white/15 text-pq-cream/75 text-sm tracking-[0.1em] uppercase hover:bg-white/5 hover:text-pq-cream hover:border-white/25 transition-all duration-300 font-normal"
+              className="block text-center py-4 rounded-xl border border-white/15 text-pq-cream text-sm tracking-[0.1em] uppercase hover:bg-white/5 hover:text-pq-cream hover:border-white/25 hover:font-bold hover:scale-[1.03] transition-all duration-300 font-normal"
               whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
             >
               Get Monthly
             </motion.a>
-            <p className="text-center text-pq-cream/25 text-xs mt-3 font-normal">Billed monthly · Cancel anytime</p>
+            <p className="text-center text-pq-cream text-xs mt-3 font-normal">Billed monthly · Cancel anytime</p>
           </motion.div>
         </div>
 
         <motion.p
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
           viewport={{ once: true }} transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-center text-pq-cream/25 text-xs mt-10 tracking-wide font-normal"
+          className="text-center text-pq-cream text-xs mt-10 tracking-wide font-normal"
         >
           All plans include full access. Prices in USD. Taxes may apply.
         </motion.p>
