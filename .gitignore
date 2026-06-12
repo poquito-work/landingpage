@@ -1,0 +1,23 @@
+node_modules
+.next/
+out/
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+
+# logs
+*.log
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# misc
+prompt.md
+verify_*.mjs
