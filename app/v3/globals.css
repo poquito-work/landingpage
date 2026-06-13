@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Remap Regular to cover 400-600 for legibility */
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Regular.ttf') format('truetype');
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --pq-green: #143322;
+  --pq-green-dark: #0C2318;
+  --pq-rust: #B65A2F;
+  --pq-cream: #F9F2E4;
+  --ease-premium: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Hero', Georgia, serif;
+  background-color: var(--pq-green);
+  color: var(--pq-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--pq-rust);
+  color: var(--pq-cream);
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pq-green-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pq-rust);
+  border-radius: 0;
+}
+
+/* Override font-light */
+.font-light {
+  font-weight: 400;
+}
+
+/* Small text baseline */
+p, li, span, label, a, td, th {
+  text-rendering: optimizeLegibility;
+}
+
+/* Grid overlay utility */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(249, 242, 228, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 242, 228, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+@layer utilities {
+  .section-pad {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+  @media (max-width: 768px) {
+    .section-pad {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

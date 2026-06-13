@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Range alias so 400–600 all resolve to Regular */
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Regular.ttf') format('truetype');
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --pq-green: #143322;
+  --pq-rust: #B65A2F;
+  --pq-cream: #F9F2E4;
+  --ease-premium: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Hero', Georgia, serif;
+  background-color: var(--pq-green);
+  color: var(--pq-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--pq-rust);
+  color: var(--pq-cream);
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pq-green);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pq-rust);
+  border-radius: 3px;
+}
+
+/* Override font-light */
+.font-light {
+  font-weight: 400;
+}
+
+/* Small text baseline */
+p, li, span, label, a, td, th {
+  text-rendering: optimizeLegibility;
+}
+
+@layer utilities {
+  .grain-texture {
+    position: relative;
+  }
+  .grain-texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .section-pad {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+  @media (max-width: 768px) {
+    .section-pad {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .rust-glow {
+    box-shadow: 0 0 30px rgba(182, 90, 47, 0.25), 0 0 60px rgba(182, 90, 47, 0.1);
+  }
+}

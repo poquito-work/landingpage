@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --pq-green: #143322;
+  --pq-rust: #B65A2F;
+  --pq-cream: #F9F2E4;
+  --ease-premium: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Hero', Georgia, serif;
+  background-color: var(--pq-cream);
+  color: var(--pq-green);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--pq-rust);
+  color: var(--pq-cream);
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pq-green);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pq-rust);
+  border-radius: 3px;
+}
+
+/* Override font-light — Hero Light (300) is too thin at small sizes */
+.font-light {
+  font-weight: 400;
+}
+
+/* Boost legibility on sub-20px text — Hero has no 500, so we remap Regular to cover 400–600 */
+@font-face {
+  font-family: 'Hero';
+  src: url('/fonts/Hero-Regular.ttf') format('truetype');
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Small text baseline — ensure crisp rendering */
+p, li, span, label, a, td, th {
+  text-rendering: optimizeLegibility;
+}
+
+@layer utilities {
+  .grain-texture {
+    position: relative;
+  }
+  .grain-texture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .section-pad {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+  @media (max-width: 768px) {
+    .section-pad {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+}
